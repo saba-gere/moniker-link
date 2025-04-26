@@ -123,12 +123,31 @@ Important:
         sudo systemctl restart dovecot
         ```
 
-# Execution
+# Running the Exploit
 
-Once the environment is set up:
+1. Adjust the Exploit Script
+- Open the `exploit.py` script.
+- Locate the section where the payload or target IP is defined.
+- Replace any hardcoded IP addresses with the current IP address of your Kali VM (e.g., 192.168.137.10).
 
-- Use the scripts in the `exploits` folder to send a crafted email with an embedded malicious document.
-- When the victim opens the `.odt` file, the exploit triggers.
+2. Start Responder
+- In a new terminal on Kali, run:
+    ```bash
+    sudo responder -I eth0
+    ```
+- Replace `eth0` with your actual network interface if needed (use `ip a` to find it).
+
+3. Execute the Exploit
+- In another terminal on Kali, execute the exploit script:
+    ```bash
+    python3 exploit.py
+    ```
+- This will send the malicious email to the victim.
+
+4. Capture the Hash
+- Monitor the Responder window.
+- When the victim interacts with the malicious link, Responder will capture the NTLM hash.
+
 
 # Disclaimer
 
