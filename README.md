@@ -1,6 +1,6 @@
 # Moniker Link (CVE-2024-21413) Exploit Demo
 
-This repository contains a demo exploit for the Moniker Link vulnerability (CVE-2024-21413), created as part of course project for Penetration Testing at the University of Sourth Brittany.
+This repository contains a demo exploit for the Moniker Link vulnerability (CVE-2024-21413), created as part of course project for Penetration Testing at the University of South Brittany.
 
 The repository includes:
 - Links to VM snapshots used for the demo setup
@@ -70,8 +70,14 @@ Important:
     ```
 
 4. Prepare the Email Environment
-    - Install a vulnerable Microsoft Office version (ensure .odt file handling is enabled).
-    - Add a new mail account in Outlook:
+    - Install a vulnerable Microsoft Office version.
+        - Download the [Office Deployment Tool (ODT)](https://support.microsoft.com/en-us/topic/office-deployment-tool-9fbd53e3-18a3-1aef-8cfe-e2eaeeeaaa4c)
+        - Copy the provided [configuration XML file](ODT-configuration.xml) into the folder where ODT was installed
+        - Start the command prompt as administrator, navigate to the ODT folder and run 
+        ```bash
+        setup.exe /configure ODT-configuration.xml
+        ```
+    - Add a in Kali created mail account in Outlook:
         - Choose Advanced Setup -> Manual Configuration
         - Select IMAP as the account type
         - Encryption: None

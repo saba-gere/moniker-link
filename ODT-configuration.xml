@@ -1,0 +1,8 @@
+<Configuration>
+  <Add OfficeClientEdition="64" Channel="SemiAnnual" Version="16.0.10730.20370">
+    <Product ID="0365ProPlusRetail">
+      <Language ID="en-us" />
+    </Product>
+  </Add>
+  <Updates Enabled="FALSE"/>
+</Configuration>
