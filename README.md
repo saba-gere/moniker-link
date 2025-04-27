@@ -19,7 +19,8 @@ When a user opens a malicious document, it can trigger external network connecti
 
 # Setup Instructions
 
-Follow these steps to recreate the environment:
+Follow these steps to recreate the environment as shown in the following image.
+![Overview of host-only network including an attacker and a victim virtual machine.](images/env%20set-up.png)
 
 ## VirtualBox Network Setup (Allow VMs to Interact)
 
